@@ -2,13 +2,41 @@ import { useState } from 'react'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
-import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <h1>
+    Hello world!
+  </h1>
+
+  <header role="banner" className="fr-header" id="header">
+    <div className="fr-header__body">
+      <div className="fr-container">
+        <div className="fr-header__body-row">
+          <div className="fr-header__brand fr-enlarge-link">
+            <div className="fr-header__brand-top">
+              <div className="fr-header__logo">
+                <p className="fr-logo"> Intitulé officiel </p>
+              </div>
+              <div className="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="header-menu" title="Menu" type="button" id="header-menu-btn" className="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div className="fr-header__service">
+              <a href="/" title="Retour à l'accueil du site - [À MODIFIER - texte alternatif de l'image : nom de l'opérateur ou du site serviciel] - République Française">
+                <p className="fr-header__service-title"> Nom du site / service </p>
+              </a>
+              <p className="fr-header__service-tagline">baseline - précisions sur l‘organisation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <p className="fr-badge">Libellé badge</p>
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
