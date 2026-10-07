@@ -1,149 +1,67 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-    <h1>
-    Hello world!
-  </h1>
-
-  <header role="banner" className="fr-header" id="header">
-    <div className="fr-header__body">
-      <div className="fr-container">
-        <div className="fr-header__body-row">
-          <div className="fr-header__brand fr-enlarge-link">
-            <div className="fr-header__brand-top">
-              <div className="fr-header__logo">
-                <p className="fr-logo"> Intitulé officiel </p>
+  <>
+    <header role="banner" className="fr-header" id="header">
+      <div className="fr-header__body">
+        <div className="fr-container">
+          <div className="fr-header__body-row">
+            <div className="fr-header__brand fr-enlarge-link">
+              <div className="fr-header__brand-top">
+                <div className="fr-header__logo">
+                  <p className="fr-logo"> Intitulé Non officiel </p>
+                </div>
               </div>
-              <div className="fr-header__navbar">
-                <button data-fr-opened="false" aria-controls="header-menu" title="Menu" type="button" id="header-menu-btn" className="fr-btn--menu fr-btn">Menu</button>
+              <div className="fr-header__service">
+                <a href="/" title="Retour à l'accueil du site - [À MODIFIER - texte alternatif de l'image : nom de l'opérateur ou du site serviciel] - République Française">
+                  <p className="fr-header__service-title"> Choix de date de l'escape Game </p>
+                </a>
+                <p className="fr-header__service-tagline">baseline - précisions sur l‘organisation</p>
               </div>
-            </div>
-            <div className="fr-header__service">
-              <a href="/" title="Retour à l'accueil du site - [À MODIFIER - texte alternatif de l'image : nom de l'opérateur ou du site serviciel] - République Française">
-                <p className="fr-header__service-title"> Nom du site / service </p>
-              </a>
-              <p className="fr-header__service-tagline">baseline - précisions sur l‘organisation</p>
             </div>
           </div>
         </div>
       </div>
+    </header>
+
+
+    <footer className="fr-footer" role="contentinfo" id="footer">
+  <div className="fr-container">
+    <div className="fr-footer__body">
+      <div className="fr-footer__brand fr-enlarge-link">
+        <a id="brand-link" title="Retour à l'accueil du site - [À MODIFIER - texte alternatif de l'image : nom de l'opérateur ou du site serviciel] - République Française" href="/">
+          <p className="fr-logo"> Intitulé Non officiel </p>
+        </a>
+      </div>
+      <div className="fr-footer__content">
+        <p className="fr-footer__content-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
+        <ul className="fr-footer__content-list">
+          <li className="fr-footer__content-item">
+            <a title="info.gouv.fr - nouvelle fenêtre" id="footer__content-link-0" href="https://info.gouv.fr" target="_blank" rel="noopener external" className="fr-footer__content-link">info.gouv.fr</a>
+          </li>
+          <li className="fr-footer__content-item">
+            <a title="service-public.gouv.fr - nouvelle fenêtre" id="footer__content-link-1" href="https://service-public.gouv.fr" target="_blank" rel="noopener external" className="fr-footer__content-link">service-public.gouv.fr</a>
+          </li>
+          <li className="fr-footer__content-item">
+            <a title="legifrance.gouv.fr - nouvelle fenêtre" id="footer__content-link-2" href="https://legifrance.gouv.fr" target="_blank" rel="noopener external" className="fr-footer__content-link">legifrance.gouv.fr</a>
+          </li>
+          <li className="fr-footer__content-item">
+            <a title="data.gouv.fr - nouvelle fenêtre" id="footer__content-link-3" href="https://data.gouv.fr" target="_blank" rel="noopener external" className="fr-footer__content-link">data.gouv.fr</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </header>
-  <p className="fr-badge">Libellé badge</p>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+    <div className="fr-footer__bottom">
+      <div className="fr-footer__bottom-copy">
+        <p>Sauf mention explicite de propriété intellectuelle détenue par des tiers, les contenus de ce site sont proposés sous <a href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank" rel="noopener external" title="Licence etalab - nouvelle fenêtre">licence etalab-2.0</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </>
   )
 }
 
