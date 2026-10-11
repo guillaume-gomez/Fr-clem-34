@@ -23,8 +23,14 @@ function SignIn() {
           <Card
             title="Se connecter avec son compte"
           >
+          <div className="fr-input-group" id="input-group-16">
+            <label className="fr-label" htmlFor="input-0"> Email </label>
+            <input className="fr-input" aria-describedby="input-0-messages" id="input-0" type="text" />
+            <div className="fr-messages-group" id="input-0-messages" aria-live="polite">
+            </div>
+          </div>
           <div className="fr-password">
-            <label className="fr-password__label fr-label" for="storybook-password-input"> Mot de passe </label>
+            <label className="fr-password__label fr-label" htmlFor="storybook-password-input"> Mot de passe </label>
             <div className="fr-input-wrap">
               <input
                 className="fr-password__input fr-input"
@@ -40,8 +46,8 @@ function SignIn() {
             <div className="fr-messages-group" id="storybook-password-input-messages" aria-live="polite">
             </div>
             <div className="fr-password__checkbox fr-checkbox-group fr-checkbox-group--sm">
-              <input ariaLabel="Afficher le mot de passe" id="undefined-show" type="checkbox" />
-              <label className="fr--password__checkbox fr-label" for="undefined-show"> Afficher </label>
+              <input aria-label="Afficher le mot de passe" id="undefined-show" type="checkbox" />
+              <label className="fr--password__checkbox fr-label" htmlFor="undefined-show"> Afficher </label>
             </div>
           </div>
           <a
