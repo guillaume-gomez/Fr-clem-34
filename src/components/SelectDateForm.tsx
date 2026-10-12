@@ -13,7 +13,7 @@ function SelectDateForm() {
   const [day, setDay] = useState<number>(16);
   const [month, setMonth] = useState<number>(10);
   const [year, setYear] = useState<number>(2026);
-  const [escapeGame, setEscapeGame] = useState<string>("");
+  const [escapeGame, setEscapeGame] = useState<keyof typeof EscapeGameMapping | "">("");
   const [consent, setConsent] = useState<boolean>(false);
 
   const isDateValid = !isNaN(day) && !isNaN(month) && !isNaN(year)
@@ -21,7 +21,7 @@ function SelectDateForm() {
   const canSubmit = escapeGame !== "" && consent && isDateValid;
 
   function buildHref(): string {
-    const escapeGameTitle = EscapeGameMapping[escapeGame] as any;
+    const escapeGameTitle = escapeGame ? EscapeGameMapping[escapeGame] : "";
     const base = `Hello ! L'escape game choisi est "${escapeGameTitle}" le ${day.toString().padStart(2, "0")}/${month.toString().padStart(2, "0")}/${year.toString()}`
     return encodeURI(base);
   }
