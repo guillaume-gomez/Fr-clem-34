@@ -1,9 +1,10 @@
+import { Link, Route, Routes } from 'react-router';
 import SelectDateForm from './components/SelectDateForm.tsx'
 import SignIn from './components/SignIn.tsx'
+import Consent from './components/Consent.tsx';
+import NotFoundPage from './components/NotFoundPage.tsx';
 
 function App() {
-  
-
   return (
   <>
     <header role="banner" className="fr-header" id="header">
@@ -17,9 +18,9 @@ function App() {
                 </div>
               </div>
               <div className="fr-header__service">
-                <a href="/" title="Retour à l'accueil du site - [À MODIFIER - texte alternatif de l'image : nom de l'opérateur ou du site serviciel] - République Française">
+                <Link to="/" title="Retour à l'accueil du site - [À MODIFIER - texte alternatif de l'image : nom de l'opérateur ou du site serviciel] - République Française">
                   <p className="fr-header__service-title"> Choix de date de l'escape Game </p>
-                </a>
+                </Link>
                 <p className="fr-header__service-tagline">baseline - précisions sur l‘organisation</p>
               </div>
             </div>
@@ -29,17 +30,21 @@ function App() {
     </header>
 
     <div className="fr-container fr-my-6w">
-      <SignIn/>
-      <SelectDateForm/>
+      <Consent/>
+      <Routes>
+        <Route path="/" element={<SignIn/>} />
+        <Route path="/select-date" element={<SelectDateForm/>} />
+        <Route path="*" element={<NotFoundPage/>} />
+      </Routes>
     </div>
 
     <footer className="fr-footer" role="contentinfo" id="footer">
       <div className="fr-container">
         <div className="fr-footer__body">
           <div className="fr-footer__brand fr-enlarge-link">
-            <a id="brand-link" title="Retour à l'accueil du site - [À MODIFIER - texte alternatif de l'image : nom de l'opérateur ou du site serviciel] - République Française" href="/">
+            <Link id="brand-link" title="Retour à l'accueil du site - [À MODIFIER - texte alternatif de l'image : nom de l'opérateur ou du site serviciel] - République Française" to="/">
               <p className="fr-logo"> Intitulé Non officiel </p>
-            </a>
+            </Link>
           </div>
           <div className="fr-footer__content">
             <p className="fr-footer__content-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>

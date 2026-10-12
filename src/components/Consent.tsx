@@ -1,4 +1,12 @@
+import { useState } from "react";
+
 function Consent() {
+  const [validate, setValidate] = useState<boolean>(false);
+
+  if(validate) {
+    return null;
+  }
+
   return (
     <div className="fr-consent-banner">
       <h2 className="fr-h6">À propos des cookies sur nomdusite.gouv.fr</h2>
@@ -7,13 +15,26 @@ function Consent() {
       </div>
       <ul className="fr-consent-banner__buttons fr-btns-group fr-btns-group--right fr-btns-group--inline-reverse fr-btns-group--inline-sm">
         <li>
-          <button title="Autoriser tous les cookies" type="button" className="fr-btn">Tout accepter</button>
+          <button
+            title="Autoriser tous les cookies"
+            type="button"
+            className="fr-btn"
+            onClick={() => setValidate(true)}
+          >
+            Tout accepter
+          </button>
         </li>
         <li>
-          <button title="Refuser tous les cookies" type="button" className="fr-btn">Tout refuser</button>
-        </li>
-        <li>
-          <button data-fr-opened="false" aria-controls="fr-consent-modal" title="Personnaliser les cookies" type="button" className="fr-btn fr-btn--secondary">Personnaliser</button>
+          <button
+            aria-describedby="tooltip-refuser"
+            title="Refuser tous les cookies"
+            type="button"
+            className="fr-btn"
+            onClick={() => setValidate(true)}
+          >
+              Tout refuser
+          </button>
+          <span className="fr-tooltip fr-placement" id="tooltip-refuser" role="tooltip">Cela reviendra à accepter quand meme 🤫</span>
         </li>
       </ul>
     </div>

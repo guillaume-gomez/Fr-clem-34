@@ -1,18 +1,10 @@
-import { useState } from "react";
 import Card from "./Card";
-import Select from "./Select";
 
-const options = [
-  { value: '14/11/2026', label: 'Samedi 14 novembre' },
-  { value: '21/11/2026', label: 'Samedi 21 novembre' },
-]
 
 function SignIn() {
-  const [date, setDate] = useState<string>();
 
-  function buildHref(): string {
-    const base = `Hello ! Voici la date que j'ai choisi est ${date}`
-    return encodeURI(base);
+  function submitPassword() {
+
   }
 
     return (
@@ -25,7 +17,7 @@ function SignIn() {
           >
           <div className="fr-input-group" id="input-group-16">
             <label className="fr-label" htmlFor="input-0"> Email </label>
-            <input className="fr-input" aria-describedby="input-0-messages" id="input-0" type="text" />
+            <input className="fr-input" disabled aria-describedby="input-0-messages" id="input-0" type="text" value="x3n@lapatatequifume.com"/>
             <div className="fr-messages-group" id="input-0-messages" aria-live="polite">
             </div>
           </div>
@@ -41,6 +33,7 @@ function SignIn() {
                 autoComplete="current-password"
                 id="storybook-password-input"
                 type="password"
+                value="alizeeforever"
               />
             </div>
             <div className="fr-messages-group" id="storybook-password-input-messages" aria-live="polite">
@@ -50,13 +43,13 @@ function SignIn() {
               <label className="fr--password__checkbox fr-label" htmlFor="undefined-show"> Afficher </label>
             </div>
           </div>
-          <a
+          <button
             type="button"
             className="fr-btn"
-            href={`https://wa.me/?text=${buildHref()}`}
+            onClick={submitPassword}
           >
             Valider
-          </a>
+          </button>
           </Card>
         </div>
       </div>
