@@ -18,7 +18,7 @@ function App() {
                 </div>
               </div>
               <div className="fr-header__service">
-                <Link to="/" title="Retour à l'accueil du site - [À MODIFIER GG, s'il te plait c'etait ta seule mission - texte alternatif de l'image : nom de l'opérateur ou du site serviciel] - République Française">
+                <Link to="/" title="Retour à l'accueil du site">
                   <p className="fr-header__service-title"> Choix de date de l'escape Game </p>
                 </Link>
               </div>
@@ -41,7 +41,7 @@ function App() {
       <div className="fr-container">
         <div className="fr-footer__body">
           <div className="fr-footer__brand fr-enlarge-link">
-            <Link id="brand-link" title="Retour à l'accueil du site - [À MODIFIER - texte alternatif de l'image : nom de l'opérateur ou du site serviciel] - République Française" to="/">
+            <Link id="brand-link" title="Retour à l'accueil du site" to="/">
               <p className="fr-logo"> Intitulé Non officiel </p>
             </Link>
           </div>

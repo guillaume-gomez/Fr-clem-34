@@ -73,7 +73,7 @@ Si vous le croisez, vous allez devoir être discret et ne pas faire de bruit pou
               description="Vous devrez trouver un moyen de vous retrouver seul dans la boutique pour l’explorer de fond en comble dans l’espoir de résoudre les mystères de cette disparition et de retrouver Adèle."
               />
             </div>
-            <div className="fr-col-12 fr-col-md-4 ">
+            <div className="fr-col-12 fr-col-md-4">
               <TuileEscapeGame
               clicked={escapeGame === "le-magicien-de-paris"}
               onClick={() => setEscapeGame("le-magicien-de-paris")}
@@ -84,6 +84,7 @@ Si vous le croisez, vous allez devoir être discret et ne pas faire de bruit pou
               />
             </div>
           </div>
+          <p>{EscapeGameMapping[escapeGame] !== undefined ? `${EscapeGameMapping[escapeGame]} est selectionné` : "Selectionne un escape game en cliquant sur une carte"}</p>
 {/* 
           <fieldset
             className="fr-fieldset"

@@ -23,8 +23,8 @@ function TuileEscapeGame({title, url, imageLink, clicked, onClick, description}:
 			</div>
 			<div className="fr-tile__header">
 					<img src={imageLink}
-							width="256px"
 							style={{
+								width: "100%",
 								height: "310px",
 								objectFit: "cover",
 								borderRadius: "16px",
