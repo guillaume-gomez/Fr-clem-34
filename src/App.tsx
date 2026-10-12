@@ -18,7 +18,7 @@ function App() {
                 </div>
               </div>
               <div className="fr-header__service">
-                <Link to="/" title="Retour à l'accueil du site - [À MODIFIER - texte alternatif de l'image : nom de l'opérateur ou du site serviciel] - République Française">
+                <Link to="/" title="Retour à l'accueil du site - [À MODIFIER GG, s'il te plait c'etait ta seule mission - texte alternatif de l'image : nom de l'opérateur ou du site serviciel] - République Française">
                   <p className="fr-header__service-title"> Choix de date de l'escape Game </p>
                 </Link>
                 <p className="fr-header__service-tagline">baseline - précisions sur l‘organisation</p>
@@ -29,7 +29,7 @@ function App() {
       </div>
     </header>
 
-    <div className="fr-container fr-my-6w">
+    <div className="fr-container fr-my-6w" style={{minHeight: "60vh" }}>
       <Consent/>
       <Routes>
         <Route path="/" element={<SignIn/>} />

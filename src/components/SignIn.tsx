@@ -1,16 +1,18 @@
+import { Link } from "react-router";
 import Card from "./Card";
 
 
 function SignIn() {
-
-  function submitPassword() {
-
-  }
-
     return (
     <>
-    <h3>Choisissez une date</h3>
+    <h3>Connexion</h3>
       <div className="fr-grid-row fr-grid-row--gutters">
+        <div className="fr-alert fr-alert--error">
+          <h3 className="fr-alert__title">Probleme sécurité</h3>
+          <p>Ce site est ultra-sécurisé : il a seulement été piraté cinq fois ce mois-ci. On a bien renforcé les protections… juste après chaque incident.
+    Le formulaire reste accessible — probablement.</p>
+        </div>
+
         <div className="fr-col-12 fr-col-md-6">
           <Card
             title="Se connecter avec son compte"
@@ -43,13 +45,13 @@ function SignIn() {
               <label className="fr--password__checkbox fr-label" htmlFor="undefined-show"> Afficher </label>
             </div>
           </div>
-          <button
-            type="button"
+          <Link type="button"
             className="fr-btn"
-            onClick={submitPassword}
+             to="/select-date"
           >
             Valider
-          </button>
+          </Link>
+
           </Card>
         </div>
       </div>

@@ -26,7 +26,7 @@ function Card({
             </div>
           )}
         </div>
-        <div className='fr-card__footer'>
+        <div className='fr-card__footer' style={{display:"flex", flexDirection: "column", gap: 20}}>
           {children}
         </div>
       </div>

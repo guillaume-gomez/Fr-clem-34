@@ -21,8 +21,8 @@ function NotFoundPage() {
                             </Link>
                         </li>
                         <li>
-                            <a className="fr-btn fr-btn--secondary" href="[À MODIFIER - lien vers un formulaire de contact]">
-                                Contactez-nous
+                            <a className="fr-btn fr-btn--secondary" href="/">
+                                Contactez-nous, (delai de réponse entre 10-20 jours ouvrées hors vacances, RTT, apéro matinal, seance de sport, ou encore veille technologique devant une série)
                             </a>
                         </li>
                     </ul>

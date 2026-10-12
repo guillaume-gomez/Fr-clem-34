@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 
 function Consent() {
   const [validate, setValidate] = useState<boolean>(false);
@@ -35,6 +36,19 @@ function Consent() {
               Tout refuser
           </button>
           <span className="fr-tooltip fr-placement" id="tooltip-refuser" role="tooltip">Cela reviendra à accepter quand meme 🤫</span>
+        </li>
+        <li>
+          <Link
+            to="/server-error"
+            data-fr-opened="false"
+            aria-controls="fr-consent-modal"
+            title="Personnaliser les cookies"
+            type="button"
+            className="fr-btn fr-btn--secondary"
+            onClick={() => setValidate(true)}
+          >
+            Personnaliser
+          </Link>
         </li>
       </ul>
     </div>
