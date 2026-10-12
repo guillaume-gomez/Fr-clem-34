@@ -21,9 +21,15 @@ function SelectDateForm() {
   const canSubmit = escapeGame !== "" && consent && isDateValid;
 
   function buildHref(): string {
-    const escapeGameTitle = escapeGame ? EscapeGameMapping[escapeGame] : "";
-    const base = `Hello ! L'escape game choisi est "${escapeGameTitle}" le ${day.toString().padStart(2, "0")}/${month.toString().padStart(2, "0")}/${year.toString()}`
+    const base = `Hello ! L'escape game choisi est "${escapeGameName()}" le ${day.toString().padStart(2, "0")}/${month.toString().padStart(2, "0")}/${year.toString()}`
     return encodeURIComponent(base);
+  }
+
+  function escapeGameName(): string | null {
+    if(escapeGame === "") {
+      return null
+    }
+    return EscapeGameMapping[escapeGame];
   }
 
   function buildWhatsAppUrl(): string {
@@ -84,7 +90,7 @@ Si vous le croisez, vous allez devoir être discret et ne pas faire de bruit pou
               />
             </div>
           </div>
-          <p>{EscapeGameMapping[escapeGame] !== undefined ? `${EscapeGameMapping[escapeGame]} est selectionné` : "Selectionne un escape game en cliquant sur une carte"}</p>
+          <p>{!escapeGameName() ? `${escapeGameName} est selectionné` : "Selectionne un escape game en cliquant sur une carte"}</p>
 {/* 
           <fieldset
             className="fr-fieldset"
