@@ -23,7 +23,14 @@ function SelectDateForm() {
   function buildHref(): string {
     const escapeGameTitle = escapeGame ? EscapeGameMapping[escapeGame] : "";
     const base = `Hello ! L'escape game choisi est "${escapeGameTitle}" le ${day.toString().padStart(2, "0")}/${month.toString().padStart(2, "0")}/${year.toString()}`
-    return encodeURI(base);
+    return encodeURIComponent(base);
+  }
+
+  function buildWhatsAppUrl(): string {
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    return isMobile
+      ? `whatsapp://send?text=${buildHref()}`
+      : `https://wa.me/?text=${buildHref()}`;
   }
 
     return (
@@ -174,7 +181,7 @@ Si vous le croisez, vous allez devoir être discret et ne pas faire de bruit pou
           <a
             className="fr-btn"
             role="link"
-            href={canSubmit ? `https://wa.me/?text=${buildHref()}` : undefined}
+            href={canSubmit ? buildWhatsAppUrl() : undefined}
             aria-disabled={!canSubmit}
           >
             Valider
