@@ -21,7 +21,6 @@ function App() {
                 <Link to="/" title="Retour à l'accueil du site - [À MODIFIER GG, s'il te plait c'etait ta seule mission - texte alternatif de l'image : nom de l'opérateur ou du site serviciel] - République Française">
                   <p className="fr-header__service-title"> Choix de date de l'escape Game </p>
                 </Link>
-                <p className="fr-header__service-tagline">baseline - précisions sur l‘organisation</p>
               </div>
             </div>
           </div>

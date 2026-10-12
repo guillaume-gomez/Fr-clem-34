@@ -1,4 +1,4 @@
-function apServorError() {
+function ServorError() {
     return (
         <doctype html>
         <html lang="fr">
