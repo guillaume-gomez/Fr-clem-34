@@ -52,7 +52,7 @@ function SelectDateForm() {
 
           <p>
             Nous avec décidé de t'offrir une place pour une escape room.
-            On pourrait meme dire que toi qui nous fait 🎁 🎉 cadeau de ta présence parmi nous.
+            On pourrait meme dire que c'est toi 🎉 qui nous fait cadeau 🎁 de ta présence parmi nous.
           </p>
 
           <p>Tu as le choix parmi</p>
@@ -161,16 +161,16 @@ Si vous le croisez, vous allez devoir être discret et ne pas faire de bruit pou
             <p>En validant cette date, tu acceptes de respecter les règles suivantes :</p>
             <ul>
               <li>
-                "Je le savais" n’est autorisé qu’après avoir trouvé la solution.
+                « Je le savais » n’est autorisé qu’après avoir trouvé la solution.
               </li>
               <li>
-                Idem pour "Non mais ce n'est pas efficace".
+                Idem pour « Je vous l'avais dit ».
               </li>
               <li>
                 Les indices sont là pour aider, pas pour confirmer que tu avais raison depuis le début.
               </li>
                <li>
-                Il est interdit de dire "C'est à grâce moi qu'on a gagné"
+                Il est interdit de dire « C'est à grâce moi que nous avons gagné »
               </li>
               <li>
                 Toute phrase commençant par « C’est évident » devra être suivie d’une explication claire.
