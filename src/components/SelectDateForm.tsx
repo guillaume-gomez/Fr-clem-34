@@ -90,7 +90,7 @@ Si vous le croisez, vous allez devoir être discret et ne pas faire de bruit pou
               />
             </div>
           </div>
-          <p>{!escapeGameName() ? `${escapeGameName} est selectionné` : "Selectionne un escape game en cliquant sur une carte"}</p>
+          <p>{escapeGameName() !== null ? `${escapeGameName()} est selectionné` : "Selectionne un escape game en cliquant sur une carte"}</p>
 {/* 
           <fieldset
             className="fr-fieldset"
